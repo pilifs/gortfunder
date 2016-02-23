@@ -3,6 +3,6 @@
 <ul>
   <% @projects.each do |project| %>
     <h2><%= link_to project.title, project %></h2>
-    <p><%= truncate(project.description, length: 1000) %></p>
+    <p><%= truncate(project.description, length: 400) %></p>
   <% end %>
 </ul>
