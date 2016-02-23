@@ -1,0 +1,8 @@
+<h1>All Projects</h1>
+
+<ul>
+  <% @projects.each do |project| %>
+    <h2><%= project.title %></h2>
+    <p><%= truncate(project.description, length: 100) %></p>
+  <% end %>
+</ul>
