@@ -19,6 +19,25 @@
     <%= f.number_field :goal %>
   </div>
 
+
+  <h3>Add Rewards</h3>
+
+  <%= f.fields_for :rewards do |reward_fields| %>
+    <div class="form-group">
+      <%= reward_fields.label :title %>
+      <%= reward_fields.text_field :title %>
+    </div>
+    <div class="form-group">
+      <%= reward_fields.label :description %>
+      <%= reward_fields.text_area :description %>
+    </div>
+    <div class="form-group">
+      <%= reward_fields.label :amount %>
+      <%= reward_fields.number_field :amount %>
+    </div>
+  <% end %>
+
+
   <div class="form-group">
     <%= f.submit %>
   </div>
