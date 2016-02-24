@@ -1,8 +1,9 @@
 <li>
   <h3><%= "$#{reward.amount} #{reward.title}" %></h3>
-  <button data-reward-id="<%= reward.id %>" class="btn btn-primary back-project-button">Back at this level</button>
   <p><%= reward.description %></p>
   <% if reward.pledges.where(user: current_user).count > 0 %>
-    YOU BACKED THIS SHIT
+    <button data-reward-id="<%= reward.id %>" class="btn btn-primary back-project-button-backed">Backed!</button>
+  <% else %>
+    <button data-reward-id="<%= reward.id %>" class="btn btn-primary back-project-button">Back at this level</button>
   <% end %>
 </li>
