@@ -6,11 +6,6 @@
 <div class="col-xs-5">
   <h2>Rewards</h2>
   <ul>
-    <% @project.rewards.each do |reward| %>
-      <li>
-        <h3><%= "$#{reward.amount} #{reward.title}" %></h3>
-        <p><%= reward.description %></p>
-      </li>
-    <% end %>
+    <%= render @project.rewards %>
   </ul>
 </div>
