@@ -6,6 +6,6 @@
 <div class="col-xs-5">
   <h2>Rewards</h2>
   <ul>
-    <%= render @project.rewards %>
+    <%= render @project.rewards.order(:amount) %>
   </ul>
 </div>
